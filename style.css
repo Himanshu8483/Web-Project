@@ -89,7 +89,7 @@ li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+  background-image: linear-gradient(rgba(233, 231, 231, 0.8), rgba(175, 173, 173, 0.7));
   z-index: 1;
   pointer-events: none;
   display: block;
@@ -101,27 +101,27 @@ li a:hover {
 
 }
 .swiper-slide .overlay h1 {
-color: white;
+color: black;
 font-size: 150%;
 /* box-shadow: 2px 4px 8px 3px #0c5d69;   */
 margin: 15% 0 5% 0;
 }
 .swiper-slide .overlay p {
-color: white;
+color: black;
 font-size: 70%;
 opacity: 0.7;
 }
 
 /* Section 2*/
 #sec2{
-  height: fit-content;
+  height: 90vh;
   width: 100%;
   text-align: center;
 }
 
 
-#content {
-  height: 500px;
+#content, #content2{
+  height: 300px;
   width: 100%;
   /* background-color: #06A3DA;           take */
   display: flex;
@@ -129,15 +129,30 @@ opacity: 0.7;
   align-items: center;
   margin: 0;
   }
-  #content div {
-      height: 300px;
+  #content div, #content2 div {
+      height: 250px;
       width: 30%;
       background-size: contain;
   }
+  #sec2 #content span,   #sec2 #content2 span{
+font-size: 20px;  
+font-weight: 600;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+padding: 2%;
+}
+#sec2 #content span a,   #sec2 #content2 span a{
+  color: #0c5d69;
+  text-shadow: 1px px 1px rgb(0, 0, 0);
+  
+
+}
   #sec2 h1{
+
     color: #0c5d69;
   text-shadow: 1px 1px 1px rgba(0, 0, 0);
-
   font-size: 40px;
   margin: 0 5%;
   padding: 2%;
@@ -149,14 +164,16 @@ opacity: 0.7;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5% 0;
+  padding: 2% 0;
 }
+
 
 #sec3 h1 {
   color: #0c5d69;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   font-size: 40px;
   margin-bottom: 2%;
+
   text-align: center;
 }
 
@@ -170,6 +187,7 @@ opacity: 0.7;
   width: 100%;
   height: 60vh; 
   margin-bottom: 2%;
+
 }
 
 #sec3 #container .box {
@@ -189,6 +207,14 @@ opacity: 0.7;
   margin-top: 2%;
 }
 
+#sec3 .div div p{
+  background-color: #0c5d69;
+  position: absolute;
+  bottom: 2px;
+  padding: 2px;
+  font-size: medium;
+}
+
 #sec3 .div div {
   height: 100px;
   width: 15%;
@@ -198,6 +224,7 @@ opacity: 0.7;
   background-position: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   transition: transform 0.3s ease;
+  color: white;
 }
 
 #sec3 .div div:hover {
@@ -307,10 +334,81 @@ button:hover {
   height: 100vh;
   width: 100%;
 }
+
+#sec5 .container {
+  display: flex;
+  min-width: fit-content;
+
+}
+
+.left-section {
+  width: 30%;
+  background-color: #0c5d69;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.left-section ul {
+  list-style: none;
+}
+
+.left-section ul li {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.left-section a {
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.left-section a:hover {
+color: orangered;
+text-decoration: none;
+}
+
+.right-section {
+  width: 70%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 2%;
+
+}
+
+.service-item {
+  margin: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-item h3 i {
+  margin-right: 10px;
+  color: #0c5d69;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #0c5d69;
+}
+
 /* ====================================== */
-#signup, #login{
+
+/* ====================================== */
+#signup, #login, #appointment{
     height: 100vh;
     width: 100%;
+    overflow:  hidden;
 }
 .container {
     height: 90vh;
@@ -325,7 +423,10 @@ button:hover {
 #login .container {
     height: 55vh;       
     top: 20%;
-
+}
+#appointment .container {
+    height: 95vh;       
+    top: 2%;
 }
  .group {
     height: 12vh;
@@ -333,6 +434,12 @@ button:hover {
     font-size: 95%;
 }
 
+.group #message {
+  width: 100%;
+  height: 50%;
+  padding: 2% 0 0 2%;
+  outline: none;
+}
 h1 {
   margin: 10%;
     text-align: center;
@@ -343,14 +450,14 @@ label{
     font-weight: bold;
 }
 
-input {
+input, #treatment{
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-input:focus {
+input:focus, #treatment:focus , #message:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px ;
@@ -395,15 +502,6 @@ a:hover {
 
 
 
-#div{
-    width: 100%;
-    height: 100vh;
-    font-size: 30px;
-    font-weight: 800;
-}
-#div span{
-    color: red;
-}
 /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
 /* color: orangered; */
 /* scroll-behavior: smooth; */
