@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+  
+}
+/* Navbar */
+.navbar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #06A3DA; */
+    background-color: #0c5d69;
+    padding: 0 3%;
+}
+.navbar .navbar-logo a{
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+.navbar .navbar-logo a span{
+  color: brown;
+  font-size: 120%;
+}
+.navbar-logo a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.navul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 50px;
+    list-style: none;
+
+}
+.navul li a{
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 7);
+  color: white;
+  font-size: 22px;
+  font-weight: 540;
+}
+li a:hover {
+  color: orangered;
+  text-decoration: none;
+  transition: color 0.7s ease;
+  
+  }
+.log{
+  display: flex;
+  gap: 50px;
+
+}
+.log a{
+   font-size: 22px; 
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 7);
+    color: white;
+}
+.log :hover{
+  color: orangered;
+  text-decoration: none;
+  transition: color 0.7s ease;
+}
+
+/* Section 1 */
+.swiper{
+  margin: 1% 0;
+  width:100%;
+  height: 80vh;
+}
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.swiper-slide .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:7% 10% 10% 15%;
+
+}
+.swiper-slide .overlay h1 {
+color: white;
+font-size: 150%;
+/* box-shadow: 2px 4px 8px 3px #0c5d69;   */
+margin: 15% 0 5% 0;
+}
+.swiper-slide .overlay p {
+color: white;
+font-size: 70%;
+opacity: 0.7;
+}
+
+/* Section 2*/
+#sec2{
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+}
+
+
+#content {
+  height: 500px;
+  width: 100%;
+  /* background-color: #06A3DA;           take */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  }
+  #content div {
+      height: 300px;
+      width: 30%;
+      background-size: contain;
+  }
+  #sec2 h1{
+    color: #0c5d69;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0);
+
+  font-size: 40px;
+  margin: 0 5%;
+  padding: 2%;
+  }
+
+/* Section 3*/
+#sec3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+}
+
+#sec3 h1 {
+  color: #0c5d69;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-size: 40px;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+#sec3 p {
+  font-size: 18px;
+  margin: 1% 5%;
+  text-align: center;
+}
+
+#sec3 #container {
+  width: 100%;
+  height: 60vh; 
+  margin-bottom: 2%;
+}
+
+#sec3 #container .box {
+  background-image: url(img/6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#sec3 .div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 2%;
+}
+
+#sec3 .div div {
+  height: 100px;
+  width: 15%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+#sec3 .div div:hover {
+  transform: scale(1.05);
+}
+
+.div1 {
+  background-image: url(img/1.jpg);
+}
+.div1:hover{
+  scale: 1.03;
+}
+.div2{
+  background-image: url(img/2.jpg);
+}
+.div2:hover{
+  scale: 1.03;
+}
+.div3 {
+  background-image: url(img/3.jpg);
+}
+.div3:hover{
+  scale: 1.03;
+}
+.div4 {
+  background-image: url(img/4.jpg);
+}
+.div4:hover{
+  scale: 1.03;
+}
+.div5 {
+  background-image: url(img/5.jpg);
+}
+.div5:hover{
+  scale: 1.03;
+}
+
+/* ====================================== */
+#sec4{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+
+#sec4 #box{
+  border-radius: 10px;
+box-shadow: 2px 2px 4px 3px;
+height: 70vh;
+width: 50%;
+  border: 1px solid black;
+  animation: animee 20s linear infinite;
+}
+@keyframes animee {
+  0%{
+    background-image: url(img/6.jpg);
+    background-size: cover;
+  }
+  25%{
+    background-image: url(img/7.jpg);
+    background-size: cover;
+  }
+  50%{
+    background-image: url(img/8.jpg);
+    background-size: cover;
+  }
+  75%{
+    background-image: url(img/9.jpg);
+    background-size: cover;
+  }
+  100%{
+    background-image: url(img/10.jpg);
+    background-size: cover;
+  }
+  
+}
+#sec4 .content{
+  flex-basis: 30%;
+  font-size: 30px;
+margin: 0;
+padding: 0;
+}
+#sec4 .content p{
+  color: #0c5d69;
+  font-size: 16px;
+}
+#sec4 .content button{
+  margin: 5%;
+  padding: 2.5%;
+  font-weight: 600;
+  text-shadow: 0 0.5px 0.5px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  background-color: orangered;
+
+
+}
+button:hover {
+  box-shadow: 0 3px 3px;
+  transition:  0.3s ease;
+
+  }
+/* ====================================== */
+#sec5 {
+  height: 100vh;
+  width: 100%;
+}
+/* ====================================== */
+#signup, #login{
+    height: 100vh;
+    width: 100%;
+}
+.container {
+    height: 90vh;
+    max-width: 500px;
+    margin: auto ;
+    top: 4%;
+    padding: 5px 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px;  
+    border-radius: 8px;
+}
+#login .container {
+    height: 55vh;       
+    top: 20%;
+
+}
+ .group {
+    height: 12vh;
+    width: 100%;
+    font-size: 95%;
+}
+
+h1 {
+  margin: 10%;
+    text-align: center;
+    color: #333;
+}
+label{
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px ;
+}
+
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    /* box-shadow: 1px -1px 1px; */
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    color: goldenrod;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+
+
+#div{
+    width: 100%;
+    height: 100vh;
+    font-size: 30px;
+    font-weight: 800;
+}
+#div span{
+    color: red;
+}
+/* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+/* color: orangered; */
+/* scroll-behavior: smooth; */
+
+
+/* footer ======================= */
+#footer {
+  background: #0c5d69;
+  color: #fff;
+  padding: 2% 1%;
+  text-align: center;
+}
+
+.footcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  /* min-width: 200px; */
+}
+
+.footer-section h2, .footer-section h3 {
+  font-size: 170%;
+  margin-bottom: 10px;
+}
+
+.footer-section h2 a span{
+  color: brown;
+  font-size: 120%;
+}
+.footer-section h2 a {
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-section p, .footer-section ul li {
+  font-size: 95%;
+  line-height: 1.6;
+  margin: 5px 0;
+
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 7);
+  color: goldenrod;
+}
+.footer-section p span{
+  font-weight: 550;
+}
+.footer-section.social a {
+  margin: 0 10px;
+  font-size: 150%;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+  color: goldenrod;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}

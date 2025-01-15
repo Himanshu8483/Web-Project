@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Care</title>
+    <!-- font awsome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Slider link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--AOS animation (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- external css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" >
+        <div class="navbar-logo" data-aos="fade-right" data-aos-duration="3000" >
+            <a href="#"><span>D</span>octor <span>C</span>are</a>
+        </div>
+    
+        <!-- Navbar -->
+        <ul class="navul">
+            <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300"><a href="#">Home</a></li>
+            <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="500"><a href="#">Services</a></li>
+            <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="900"><a href="#">Book Appointment</a></li>
+            <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="1100"><a href="#">About</a></li>
+        </ul>
+    
+        <div class="log">
+            <a href="login.html"  data-aos="fade-down" data-aos-duration="3000">Login</a>
+            <a href="login.html" data-aos="fade-down" data-aos-duration="3000" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+    
+  <!-- ====================== -->
+<section id="sec1">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="overlay">
+                <h1>Take the world's best quality Treadment</h1>
+                <p>Your health is your greatest wealth! Don’t wait for small issues to become big problems. Take the first step toward better health by booking your appointment today.</p>
+                </div>
+                <img src="img/1.jpg" width="100%" height="100%">
+            </div>
+            <div class="swiper-slide">
+                <div class="overlay">
+                <h1>Find Best Doctors With AESTHETIC</h1>
+                <p>Your health is your greatest wealth! Don’t wait for small issues to become big problems. Take the first step toward better health by booking your appointment today.</p>
+                </div>
+                <img src="img/2.jpg" width="100%" height="100%">
+            </div>
+            <div class="swiper-slide">
+                <div class="overlay">
+                <h1>Improve your overall health</h1>
+                <p>Your health is your greatest wealth! Don’t wait for small issues to become big problems. Take the first step toward better health by booking your appointment today.</p>
+
+                </div>
+                <img src="img/3.jpg" width="100%" height="100%">
+            </div>
+            <div class="swiper-slide">
+                <div class="overlay">
+                    <h1>We Care for Your Health Every Moment</h1>
+                    <p>Your health is your greatest wealth! Don’t wait for small issues to become big problems. Take the first step toward better health by booking your appointment today.</p>
+
+                </div>
+                <img src="img/4.jpg" width="100%" height="100%">
+            </div>
+            <div class="swiper-slide">
+                <div class="overlay">
+                    <h1>Making Health Care Better Together</h1>
+                    <p>Your health is your greatest wealth! Don’t wait for small issues to become big problems. Take the first step toward better health by booking your appointment today.</p>
+
+                </div>
+                <img src="img/5.jpg" width="100%" height="100%">
+            </div>
+        </div>
+        <div style="color: #0c5d69" class="swiper-button-next"></div>
+        <div style="color: #0c5d69" class="swiper-button-prev"></div>
+        <div style="color: #0c5d69" class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+    
+    <section id="sec2">
+    <h1>Procedure Category</h1>
+    <p>Our caring experts are here to listen, guide, and help you feel your best. A healthier, happier you is just one visit away!</p>
+    <div id="content">
+        <div data-aos="fade-down-left" data-aos-duration="500">
+
+            <img src="img/3.jpg" width="100%" height="100%">
+        <span>Book Now</span></div>
+        <div data-aos="fade-up-left" data-aos-duration="700">
+        <img src="img/4.jpg" width="100%" height="100%"></div>
+        <div data-aos="fade-up-right" data-aos-duration="900">
+        <img src="img/5.jpg" width="100%" height="100%"></div>
+    </div>
+    <div id="content">
+        <div data-aos="fade-down-left" data-aos-duration="500">
+            <img src="img/3.jpg" width="100%" height="100%"></div>
+        <div data-aos="fade-up-left" data-aos-duration="700">
+        <img src="img/4.jpg" width="100%" height="100%"></div>
+        <div data-aos="fade-up-right" data-aos-duration="900">
+        <img src="img/5.jpg" width="100%" height="100%"></div>
+    </div>
+</section>
+  <!-- ====================== -->
+  <section id="sec3">
+    <h1>Our Treatment</h1>
+    <p>Health is the foundation of a happy life. Don’t let small concerns grow into bigger worries. Schedule your check-up now, and let us help you live your best, healthiest life!</p>
+    <div id="container">
+        <div class="box" data-aos="fade-up" data-aos-duration="700"></div>
+    </div>
+    <div class="div">
+        <div onclick="div1()" class="div1" data-aos="fade-up" data-aos-duration="200"></div>
+        <div onclick="div2()" class="div2" data-aos="fade-up" data-aos-duration="200"></div>
+        <div onclick="div3()" class="div3" data-aos="fade-up" data-aos-duration="200"></div>
+        <div onclick="div4()" class="div4" data-aos="fade-up" data-aos-duration="200"></div>
+        <div onclick="div5()" class="div5" data-aos="fade-up" data-aos-duration="200"></div>
+    </div>
+</section>
+
+    
+
+    <!-- ======================== -->
+    <section id="sec4">
+        <div id="box">
+            <div class="img"></div>
+        </div>
+        <div class="content">
+            <p>We are here for your care</p>
+            <h1>Best Care & Better Doctor</h1>
+            <p>Your well-being matters! Prioritize yourself today by booking an appointment. A healthier future starts with the care you deserve — we're here to support you every step of the way!</p>
+            <button>MAKE AN APPOINTMENT</button>
+        </div>
+    </section>
+
+
+    <section id="sec5">
+        
+    </section>
+
+
+
+    <footer id="footer" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="1">
+        <div class="footcontainer">
+          <!-- Logo and About -->
+          <div class="footer-section">
+            <h2><a href="#"><span>D</span>octor <span>C</span>are</a></h2>
+            <p>Providing trusted healthcare solutions. Book your doctor’s appointment easily and quickly.</p>
+          </div>
+      
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#appointment">Book Appointment</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><span>Phone:</span> +123 456 7890</p>
+            <p><span>Email:</span> contact@doctorcare.com</p>
+            <p><span>Location:</span> 123 Health Street, City, Country</p>
+          </div>
+      
+          <!-- Social Media -->
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 DoctorCare. All Rights Reserved.</p>
+        </div>
+      </footer>
+      
+
+
+    <!-- tilt the div  -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <!-- slider link  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- typed.js link-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- vanta.js (Costumized Effect Library) link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <!-- vanta.js link-->
+    <script src="vanta.js"></script>
+    <!-- AOS animation 1st link-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./vanta.js"></script>
+    <!-- AOS animation 2nd link -->
+    <script>
+      AOS.init();
+    </script>
+    <!-- external js link-->
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
