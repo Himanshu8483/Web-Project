@@ -1,0 +1,92 @@
+@media screen and (max-width: 1000px) {
+    .menu {
+      display: block;
+    }
+  
+    .navul {
+      display: none;
+      flex-direction: column;
+      background-color: #0c5d69;
+      position: absolute;
+      top: 90px;
+      right: 20px;
+      width: 90%;
+      border-radius: 8px;
+      padding: 10px;
+
+    }
+  
+    .navul.active {
+      display: flex;
+    }
+  
+    .navul li {
+      margin: 10px 0;
+    }
+  
+    .log {
+      display: none; /* Hide login/logout */
+    }
+
+
+  #sec2 #content, #content2{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        height: fit-content;
+    }
+    #content div, #content2 div {
+        width: 90%;
+    }
+    #content2 {
+        margin :15% 0;
+    }
+
+    #sec3 .div{
+        display: flex;
+        flex-direction: column;
+    }
+    #sec3 .div div {
+        width: 90%;
+        height:120px;
+    }
+
+    #sec4{
+        display: flex;
+        flex-direction: column;
+    }
+    #sec4 #box {
+    width: 90%;
+    }
+    #sec4 .content{
+        font-size: 25px;
+    }
+
+#sec5 {
+    max-width: 100%;
+  min-height: 190vh;
+  box-shadow: 0 4px 8px;  
+  margin: 5% 0;
+}
+    #sec5 .container {
+  box-shadow: none;  
+    }
+    .left-section {
+        /* display: none; */
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  
+    .right-section {
+    gap: 5%;
+      width: 100%; 
+      grid-template-columns: auto; 
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .left-section {
+        display: none;
+    }
+
+} 
