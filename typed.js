@@ -1,8 +1,8 @@
 
-var typed = new Typed('#text', {
-    strings: ['<i>Welcome</i> Sir/Mam', 'Book Your Doctor Appoitment.'],
+var typed = new Typed('#title', {
+    strings: ['Doctor Care', 'Book Appoitment'],
     loop: true,
     typeSpeed: 50,
-    backSpeed: 50,
+    backSpeed: 40,
   });
   

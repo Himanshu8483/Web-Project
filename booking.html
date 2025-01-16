@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doctor Appointment Booking</title>
-    <!-- font awsome link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Slider link  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <!--AOS animation (Animate On Scroll) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- external css file -->
-    <link rel="stylesheet" href="style.css">
+  <title id="title">Doctor Care</title>
+  <link rel="icon" href="img/title.png">
+  <!-- font awsome link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Slider link  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!--AOS animation (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- external css file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="appointment"data-aos="fade-right" data-aos-duration="2000">
@@ -28,6 +29,11 @@
           <label for="phone">Phone Number:</label>
           <input type="text" id="phone" placeholder="10-digit number">
           <p id="errPhone" class="error"></p>
+        </div>
+        <div class="group">
+          <label for="age">Age:</label>
+          <input type="age" id="age" placeholder="Enter Age">
+          <p id="errAge" class="error"></p>
         </div>
 
         <div class="group">
@@ -57,10 +63,10 @@
           <p id="errTime" class="error"></p>
         </div>
 
-        <div class="group">
+        <!-- <div class="group">
           <label for="message">Message:</label>
           <textarea id="message" placeholder="Enter your message"></textarea>
-        </div>
+        </div> -->
 
         <input type="submit" class="btn" value="Book Appointment" onclick="return appointmet()">
       </form>
@@ -73,17 +79,19 @@
 let appointmet=()=>{
       let fullname = document.getElementById('fullname').value;
       let phone = document.getElementById('phone').value;
+      let age = document.getElementById('age').value;
       let treatment = document.getElementById('treatment').value;
       let date = document.getElementById('date').value;
       let time = document.getElementById('time').value;
-      let message = document.getElementById('message').value;
+      // let message = document.getElementById('message').value;
 
     let errName = document.querySelector("#errName");
     let errPhone = document.querySelector("#errPhone");
+    let errAge = document.querySelector("#errAge");
     let errTreatment = document.querySelector("#errTreatment");
     let errDate = document.querySelector("#errDate");
     let errTime = document.querySelector("#errTime");
-    let errMessage = document.querySelector("#errMessage");
+    // let errMessage = document.querySelector("#errMessage");
 
       if (fullname === '') {
         errName.innerHTML = 'Please enter your full name';
@@ -93,6 +101,12 @@ let appointmet=()=>{
       }
       if (phone === "" || isNaN(phone) || phone.length !== 10) {
         errPhone.innerHTML = "Please enter a valid 10-digit number";
+        return false;
+    } else {
+        errPhone.innerHTML = "";
+    }
+      if (age === "" || isNaN(age)) {
+        errPhone.innerHTML = "Please enter a valid Age";
         return false;
     } else {
         errPhone.innerHTML = "";
@@ -125,12 +139,13 @@ let appointmet=()=>{
       
     localStorage.setItem("Name", fullname)
     localStorage.setItem("Phone", phone)
+    localStorage.setItem("Age", age)
     localStorage.setItem("Treatment", treatment)
     localStorage.setItem("Date", date)
     localStorage.setItem("Time", time)
-    localStorage.setItem("Message", message)
+    // localStorage.setItem("Message", message)
 
-      alert(" Successfully Doctor Appointment Booked! Redirecting to login page...");
+      alert(" Successfully Doctor Appointment Booked! Redirecting to Home page...");
       location.href="login.html";
     return false;       // to not refresh page
     }

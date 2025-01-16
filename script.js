@@ -1,4 +1,13 @@
-
+// let isname=true;
+// setInterval(() => {
+//     document.title=isname?"Doctor Care":"Book Appointment";
+//     if(isname==true){
+//         isname = false;
+//     }
+//     else {
+//         isname =true;
+//     }
+// }, 2000);
 
 let signup=()=>{
 

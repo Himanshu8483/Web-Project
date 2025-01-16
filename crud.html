@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+    <style>
+        body {
+            background-color: cadetblue;
+            color: #fff;
+        } 
+        h1 {
+            text-align: center;
+        }
+        #headers, .row {
+            display: grid;
+            grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+            background-color: #005f63;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .row {
+            background-color: #007b7f;
+        }
+        #headers div, .row div {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body onload="fetchData()">
+    <h1>Doctor Appointment List</h1>
+    <div id="container">
+        <div id="headers">
+            <div>Name</div>
+            <div>Age</div>
+            <div>Phone</div>
+            <div>Treatment</div>
+            <div>Date</div>
+            <div>Time</div>
+            <div>Price</div>
+        </div>
+        
+        <div id="display">
+        </div>
+    </div>
+    <script src="crud.js"></script>
+</body>
+</html>
