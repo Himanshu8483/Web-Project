@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor</title>
+    <link rel="stylesheet" href="media.css">
     <style>
         body {
-            background-color: cadetblue;
+            background-color: #005f63;
             color: #fff;
         } 
         h1 {
@@ -14,11 +15,11 @@
         }
         #headers, .row {
             display: grid;
-            grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+            grid-template-columns: 10% 5% 10% 15% 10% 10% 7% 7% 9% 7% 10%;
             background-color: #005f63;
             padding: 10px;
             border-radius: 10px;
-            margin: 10px 0;
+            margin: 10px 30px;
         }
         .row {
             background-color: #007b7f;
@@ -27,10 +28,47 @@
             font-size: 18px;
             letter-spacing: 1px;
         }
+        .cancel-button{
+            background-color: brown;
+            border-radius: 5px ;
+            width: 110px;
+            height: 140%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        a {
+            position: fixed;
+            right: 5%;
+            top: 2%;
+            padding: 1%;
+            font-size: large;
+            border-radius: 10px;
+            background-color: brown;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+
+        }
+@media screen and (max-width: 1000px) {
+    #headers, .row {
+        display: block;
+    }
+    .cancel-button{
+        height: 50px;
+    }
+    a {
+            position: fixed;
+            top: 10%;
+    }
+}
     </style>
 </head>
 <body onload="fetchData()">
     <h1>Doctor Appointment List</h1>
+    <a href="home.html">Go to Home Section</a>
     <div id="container">
         <div id="headers">
             <div>Name</div>
@@ -39,7 +77,11 @@
             <div>Treatment</div>
             <div>Date</div>
             <div>Time</div>
+            <div>People</div>
             <div>Price</div>
+            <div>Total Price</div>
+            <div>id</div>
+            <div>Cancel</div>
         </div>
         
         <div id="display">

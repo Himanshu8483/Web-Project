@@ -29,7 +29,7 @@ let del =(id)=>{
 }
 
 
-let appointmet=async()=>{
+let appointmet=()=>{
     let fullname = document.getElementById('fullname').value;
     let phone = document.getElementById('phone').value;
     let age = document.getElementById('age').value;
@@ -101,31 +101,28 @@ let appointmet=async()=>{
 
 
 
-    let url = 'http://localhost:3000/appointment'
-    let response = await fetch(url, {
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(
-        {
-          Name:fullname,
-          Phone:phone,
-          Age:age,
-          Treatment:treatment,
-          Date:date,
-          Time:time,
-          People:people,
-          Price:price
-        }),
-    });
-    let data = await response.json();
-    console.log(data);
-
+    // let url = 'http://localhost:3000/appointment'
+    // fetch(url, {
+    //   method:"POST",
+    //   headers:{
+    //     "Content-Type":"application/json"
+    //   },
+    //   body:JSON.stringify(
+    //     {
+    //       Name:fullname,
+    //       Phone:phone,
+    //       Age:age,
+    //       Treatment:treatment,
+    //       Date:date,
+    //       Time:time,
+    //       People:people,
+    //       Price:price
+    //     }
+    //   )
+    // })
 
 
     alert("Sign up Successful! Redirecting to login page...");
   location.href="crud.html";
   return false;       // to not refresh page
-  };
-  appointmet();
+  }

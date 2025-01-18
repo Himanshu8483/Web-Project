@@ -1,60 +1,57 @@
 {
-    "appointment" : [
-        {"Name":"Himanshu",
-        "Phone":7909348483,
-        "Age":22,
-        "treatment":"Cold",
-        "date":"20-01-2025",
-        "Time":"19:00",
-        "Price":250
+  "appointment": [
+    {
+      "Name": "Himanshu",
+      "Phone": 7909348483,
+      "Age": 22,
+      "Treatment": "Cold",
+      "Date": "20-01-2025",
+      "Time": "19:00",
+      "People": 3,
+      "Price": 250,
+      "id": "e56b"
     },
-        {"Name":"Jatin",
-        "Phone":1234567890,
-        "Age":24,
-        "treatment":"Normal Checkup",
-        "date":"25-01-2025",
-        "Time":"13:00",
-        "Price":300
+    {
+      "Name": "Jatin",
+      "Phone": 1234567890,
+      "Age": 24,
+      "Treatment": "Normal Checkup",
+      "Date": "25-01-2025",
+      "Time": "13:00",
+      "People": 2,
+      "Price": 300,
+      "id": "0772"
     },
-        {"Name":"Himanshu",
-        "Phone":7909348483,
-        "Age":22,
-        "treatment":"Cold",
-        "date":"20-01-2025",
-        "Time":"19:00",
-        "Price":250
+    {
+      "Name": "Yash",
+      "Phone": 7909348483,
+      "Age": 22,
+      "Treatment": "Cold",
+      "Date": "20-01-2025",
+      "Time": "19:00",
+      "People": 3,
+      "Price": 250,
+      "id": "e56b"
     },
-        {"Name":"Jatin",
-        "Phone":1234567890,
-        "Age":24,
-        "treatment":"Normal Checkup",
-        "date":"25-01-2025",
-        "Time":"13:00",
-        "Price":300
+    {
+      "Name": "Vijay",
+      "Phone": 1234567890,
+      "Age": 24,
+      "Treatment": "Normal Checkup",
+      "Date": "25-01-2025",
+      "Time": "13:00",
+      "People": 2,
+      "Price": 300,
+      "id": "0772"
     },
-        {"Name":"Himanshu",
-        "Phone":7909348483,
-        "Age":22,
-        "treatment":"Cold",
-        "date":"20-01-2025",
-        "Time":"19:00",
-        "Price":250
-    },
-        {"Name":"Jatin",
-        "Phone":1234567890,
-        "Age":24,
-        "treatment":"Normal Checkup",
-        "date":"25-01-2025",
-        "Time":"13:00",
-        "Price":300
-    },
-        {"Name":"Vijay",
-        "Phone":1234561234,
-        "Age":23,
-        "treatment":"Eye Checkup",
-        "date":"22-01-2025",
-        "Time":"09:00",
-        "Price":500
+    {
+      "id": "605e",
+      "Name": "Him",
+      "Phone": "7909348483",
+      "Age": "23",
+      "Treatment": "Dental Care",
+      "Date": "2025-02-07",
+      "Time": "18:58"
     }
-    ]
+  ]
 }
