@@ -13,6 +13,7 @@
       width: 90%;
       border-radius: 8px;
       padding: 10px;
+      padding-bottom: 50%;
 
     }
   
@@ -26,21 +27,37 @@
   
     .log {
       display: none; /* Hide login/logout */
+      flex-direction: column;
+      background-color: #0c5d69;
+      position: absolute;
+      bottom: 70px;
+      left: 20px;
+      width: 90%;
+      border-radius: 8px;
+      padding: 2%;
+      padding-left: 40%;
+      z-index: 2;
+    }
+    .log.active{
+      display: flex;
     }
 
+    .swiper-slide .overlay h1{
+      font-size: 110%;
+    }
 
-  #sec2 #content, #content2{
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        height: fit-content;
-    }
-    #content div, #content2 div {
-        width: 90%;
-    }
-    #content2 {
-        margin :15% 0;
-    }
+  #sec2 h1, #sec3 h1 {
+      font-size: 30px;
+  }
+
+  #sec2 p, #sec3 p{
+      font-size: 18px;
+  }
+
+  .content-item span {
+      font-size: 18px;
+  }
+
 
     #sec3 .div{
         display: flex;
@@ -76,15 +93,12 @@
       width: 100%; 
       margin-bottom: 20px; 
     }
-  
     .right-section {
+  padding: 0px;
     gap: 5%;
       width: 100%; 
       grid-template-columns: auto; 
     }
-
-
-    
 }
 @media screen and (max-width: 480px) {
     .left-section {

@@ -9,6 +9,7 @@
 //     }
 // }, 2000);
 
+
 let signup=()=>{
 
     // Fetching input values from the form
@@ -26,6 +27,17 @@ let signup=()=>{
     let errcpass = document.querySelector("#errorcpass");
 
     if (signname === "") {
+        Swal.fire({
+            position: "top-end",
+            title: "Invalid!",
+            icon: "error",
+            text: "Please enter your name",
+            customClass: {
+                popup: 'swal2-popup-custom'
+            },
+            timer: 3000,
+            showConfirmButton: false,
+        });
         errname.innerHTML = "Please enter your name";  // Display error message
         return false;  // Stop the function execution and return false
     } else {
@@ -33,6 +45,17 @@ let signup=()=>{
     }
 
     if (signnum === "" || isNaN(signnum) || signnum.length !== 10) {
+        Swal.fire({
+            position: "top-end",
+            title: "Invalid!",
+            icon: "error",
+            text: "Please enter a valid 10-digit number",
+            customClass: {
+                popup: 'swal2-popup-custom'
+            },
+            timer: 3000,
+            showConfirmButton: false,
+        });
         errnumber.innerHTML = "Please enter a valid 10-digit number";
         return false;
     } else {
@@ -40,6 +63,17 @@ let signup=()=>{
     }
 
     if (signemail === "" || !signemail.includes("@") || !signemail.includes(".com")) {
+        Swal.fire({
+            position: "top-end",
+            title: "Invalid!",
+            icon: "error",
+            text: "Please enter a valid email",
+            customClass: {
+                popup: 'swal2-popup-custom'
+            },
+            timer: 3000,
+            showConfirmButton: false,
+        });
         erremail.innerHTML = "Please enter a valid email";
         return false;
     } else {
@@ -47,7 +81,18 @@ let signup=()=>{
     }
 
     if (signpass.length < 6) {
-        errpass.innerHTML = "Password must be at least 6 characters long";
+        Swal.fire({
+            position: "top-end",
+            title: "Invalid!",
+            icon: "error",
+            text: "Password must be at least 6 characters long",
+            customClass: {
+                popup: 'swal2-popup-custom'
+            },
+            timer: 3000,
+            showConfirmButton: false,
+        });
+        errpass.innerHTML = "Password must be at least 6 digit";
         return false;
     } else {
         errpass.innerHTML = "";
@@ -59,6 +104,17 @@ let signup=()=>{
         signpass.match(/[a-z]/) &&  // Checks if the password contains lowercase letters
         signpass.match(/[A-Z]/)  // Checks if the password contains uppercase letters
     )) {
+        Swal.fire({
+            position: "top-end",
+            title: "Invalid!",
+            icon: "error",
+            text: "Password must be no, symbol, upper & lowercase letters",
+            customClass: {
+                popup: 'swal2-popup-custom'
+            },
+            timer: 3000,
+            showConfirmButton: false,
+        });
         errpass.innerHTML = "Password must be no, symbol, upper & lowercase letters";
         return false;
     } else {
@@ -66,24 +122,45 @@ let signup=()=>{
     }
 
     if (signcpass !== signpass) {
+        Swal.fire({
+            position: "top-end",
+            title: "Invalid!",
+            icon: "error",
+            text: "Passwords do not match",
+            customClass: {
+                popup: 'swal2-popup-custom'
+            },
+            timer: 3000,
+            showConfirmButton: false,
+        });
         errcpass.innerHTML = "Passwords do not match";
         return false;
     } else {
         errcpass.innerHTML = "";
     }
-
     
 
     localStorage.setItem("name", signname)
     localStorage.setItem("email", signemail)
     localStorage.setItem("number", signnum)
     localStorage.setItem("password", signpass)
+    localStorage.setItem("islogin", "true");
 
     alert("Sign up Successful! Redirecting to login page...");
+
     location.href="login.html";
     return false;       // to not refresh page
 
 }
+let Bookk = () => {
+    console.log(localStorage.getItem("islogin"));
+    if (localStorage.getItem("islogin") === "true") {
+        location.href = "booking.html";
+    } else {
+        alert("Please Login First!");
+    }
+};
+
 
 let login=()=>{
     let loginname=document.querySelector("#loginname").value
@@ -96,8 +173,22 @@ let login=()=>{
         location.href="home.html";
 
     }else {
-        alert("invalid Name or Password")
+            // library of alert 
+            Swal.fire({         
+                position: "top-end",
+                title: "invalid Name or Password!",
+                icon: "error",
+                text: "Please Enter Correct Name & Password",
+                color:"brown",
+                timer: 3000,
+                showConfirmButton: false,
+            });
+    
+        // alert("invalid Name or Password")
     }
+
+    alert("Login Successful! Redirecting to Home page...");
+
     return false;
 };
 
@@ -107,6 +198,8 @@ let logout=()=>{
     localStorage.removeItem("#password")
     location.href="login.html"
 }
+
+
 
 // ==================================================
 // Function to set background image to 1

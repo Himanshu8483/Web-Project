@@ -14,22 +14,45 @@ let fetchData= async()=>{
             <div>${e.Treatment}</div>
             <div>${e.Date}</div>
             <div>${e.Time}</div>
-            <div>${e.People}</div>
-            <div>${e.Price}</div> 
-            <div>${e.People*e.Price}</div> 
-            <div>${e.id}</div> 
-            <div onclick="del('${e.id}')" class="cancel-button"><span>Cancel</span></div>
+            <div>${e.Price}</div>       
+            <div onclick="condel('${e.id}')" class="cancel-button">Cancel</div>
+            <div onclick="condel('${e.id}')" class="cancel-button" id="edit">Edit</div>
         </div> `
     })
 }
+    // auto made in json: e.id
+    //We can perform operation: e.People*e.Price
 
+    
 let del =(id)=>{
     let url = `http://localhost:3000/appointment/${id}`
     fetch(url, {method: "DELETE"})
 }
 
+// alert script library 
+let condel=(id)=>{
+  Swal.fire({
+    title: "Are you sure?",
+    text: "This cannot be undone, proceed carefully!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!",
+    
+  }).then((result) => {
+    if (result.isConfirmed) {
+      del(id)
+      Swal.fire({
+        title: "Deleted!",
+        text: "Your file has been deleted.",
+        icon: "success"
+      });
+    }
+  });
+}
 
-let appointmet=async()=>{
+let appointment=()=>{
     let fullname = document.getElementById('fullname').value;
     let phone = document.getElementById('phone').value;
     let age = document.getElementById('age').value;
@@ -44,29 +67,72 @@ let appointmet=async()=>{
   let errTreatment = document.querySelector("#errTreatment");
   let errDate = document.querySelector("#errDate");
   let errTime = document.querySelector("#errTime");
-  // let errMessage = document.querySelector("#errMessage");
 
     if (fullname === '') {
+      Swal.fire({
+        position: "top-end",
+        title: "Invalid!",
+        icon: "error",
+        text: "Please enter your name",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
       errName.innerHTML = 'Please enter your full name';
       return false;
     } else {
       errName.innerHTML = '';
     }
     if (phone === "" || isNaN(phone) || phone.length !== 10) {
+      Swal.fire({
+        position: "top-end",
+        title: "Invalid!",
+        icon: "error",
+        text: "Please enter your Phone Number",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
       errPhone.innerHTML = "Please enter a valid 10-digit number";
       return false;
   } else {
       errPhone.innerHTML = "";
   }
     if (age === "" || isNaN(age)) {
+      Swal.fire({
+        position: "top-end",
+        title: "Invalid!",
+        icon: "error",
+        text: "Please enter your Age",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
       errAge.innerHTML = "Please enter a valid Age";
       return false;
   } else {
-      errPhone.innerHTML = "";
+      errAge.innerHTML = "";
   }
 
     // Treatment Validation
     if (treatment === '') {
+      Swal.fire({
+        position: "top-end",
+        title: "Invalid!",
+        icon: "error",
+        text: "Please Select your Problem",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
       errTreatment.innerHTML = 'Please select a treatment';
       return false;
     } else {
@@ -75,6 +141,17 @@ let appointmet=async()=>{
 
     // Date Validation
     if (date === '') {
+      Swal.fire({
+        position: "top-end",
+        title: "Invalid!",
+        icon: "error",
+        text: "Please select an appointment date",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
       errDate.innerHTML = 'Please select an appointment date';
       return false;
     } else {
@@ -83,12 +160,33 @@ let appointmet=async()=>{
 
     // Time Validation
     if (time === '') {
+      Swal.fire({
+        position: "top-end",
+        title: "Invalid!",
+        icon: "error",
+        text: "Please enter an appointment time",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
       errTime.innerHTML = 'Please select an appointment time';
       return false;
     } else {
       errTime.innerHTML = '';
     }
-
+      Swal.fire({
+        position: "top-end",
+        title: "Form Submitted Successfully!",
+        icon: "success",
+        text: "Redirecting to the Submitted form Section",
+        customClass: {
+            popup: 'swal2-popup-custom'
+        },
+        timer: 3000,
+        showConfirmButton: false,
+    });
     
   localStorage.setItem("Name", fullname)
   localStorage.setItem("Phone", phone)
@@ -98,11 +196,8 @@ let appointmet=async()=>{
   localStorage.setItem("Time", time)
   // localStorage.setItem("Message", message)
 
-
-
-
     let url = 'http://localhost:3000/appointment'
-    let response = await fetch(url, {
+     fetch(url, {
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -115,17 +210,11 @@ let appointmet=async()=>{
           Treatment:treatment,
           Date:date,
           Time:time,
-          People:people,
-          Price:price
+          Price:250
         }),
     });
-    let data = await response.json();
-    console.log(data);
-
-
-
-    alert("Sign up Successful! Redirecting to login page...");
+    
+    // alert("Sign up Successful! Redirecting to login page...");
   location.href="crud.html";
   return false;       // to not refresh page
   };
-  appointmet();

@@ -1,104 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title">Doctor Care</title>
-  <link rel="icon" href="img/title.png">
-  <!-- font awsome link-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Slider link  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <!--AOS animation (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- external css file -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Care</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #sec2 {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #sec2 h1 {
+            color: #0c5d69;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        #sec2 p {
+            color: #0c5d69;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .content-item {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .content-item span {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            color: #0c5d69;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            #sec2 h1 {
+                font-size: 28px;
+            }
+
+            #sec2 p {
+                font-size: 16px;
+            }
+
+            .content-item span {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div id="appointment"data-aos="fade-right" data-aos-duration="2000">
-    <div class="container">
-      <h1>Appointment</h1>
-      <form>
-        <div class="group">
-          <label for="fullname">Full Name:</label>
-          <input type="text" id="fullname" placeholder="Enter your name">
-          <p id="errName" class="error"></p>
+    <section id="sec2">
+        <h1>Procedure Category</h1>
+        <p>Our caring experts are here to listen, guide, and help you feel your best. A healthier, happier you is just one visit away!</p>
+        <div class="content-grid">
+            <div class="content-item" data-aos="fade-down-left" data-aos-duration="500">
+                <img src="img/p1.jpg" alt="Dental Equipment">
+                <span onclick="Bookk()">Dental Equipment</span>
+            </div>
+            <div class="content-item" data-aos="fade-down-left" data-aos-duration="500">
+                <img src="img/p2.jpg" alt="Dental Procedure">
+                <span onclick="Bookk()">Dental Procedure</span>
+            </div>
+            <div class="content-item" data-aos="fade-down-left" data-aos-duration="500">
+                <img src="img/p3.jpg" alt="Skin Treatment">
+                <span onclick="Bookk()">Skin Treatment</span>
+            </div>
+            <div class="content-item" data-aos="fade-down-left" data-aos-duration="500">
+                <img src="img/p4.jpg" alt="Dental Surgery">
+                <span onclick="Bookk()">Dental Surgery</span>
+            </div>
+            <div class="content-item" data-aos="fade-down-left" data-aos-duration="500">
+                <img src="img/p5.jpg" alt="General Surgery">
+                <span onclick="Bookk()">General Surgery</span>
+            </div>
+            <div class="content-item" data-aos="fade-down-left" data-aos-duration="500">
+                <img src="img/p6.jpg" alt="Medical Consultation">
+                <span onclick="Bookk()">Medical Consultation</span>
+            </div>
         </div>
+    </section>
 
-        <div class="group">
-          <label for="phone">Phone Number:</label>
-          <input type="text" id="phone" placeholder="10-digit number">
-          <p id="errPhone" class="error"></p>
-        </div>
-        <div class="group">
-          <label for="age">Age:</label>
-          <input type="number" id="age" placeholder="Enter Age">
-          <p id="errAge" class="error"></p>
-        </div>
-
-        <div class="group">
-          <label for="treatment">Select Treatment:</label>
-          <select id="treatment">
-            <option value="">Choose Treatment</option>
-            <option value="General Checkup">General Checkup</option>
-            <option value="Dental Care">Dental Care</option>
-            <option value="Eye Checkup">Eye Checkup</option>
-            <option value="Skin Treatment">Skin Treatment</option>
-            <option value="Pediatric Care">Pediatric Care</option>
-            <option value="Physiotherapy">Physiotherapy</option>
-            <option value="Physiotherapy">Other</option>
-          </select>
-          <p id="errTreatment" class="error"></p>
-        </div>
-
-        <div class="group">
-          <label for="date">Appointment Date:</label>
-          <input type="date" id="date">
-          <p id="errDate" class="error"></p>
-        </div>
-
-        <div class="group">
-          <label for="time">Appointment Time:</label>
-          <input type="time" id="time">
-          <p id="errTime" class="error"></p>
-        </div>
-
-        <!-- <div class="group">
-          <label for="message">Message:</label>
-          <textarea id="message" placeholder="Enter your message"></textarea>
-        </div> -->
-
-        <input type="submit" class="btn" value="Book Appointment" onclick="return appointmet()">
-      </form>
-    </div>
-  </div>
-
-
-
-    <!-- vanta.js (Costumized Effect Library) link-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <!-- vanta.js link-->
     <script>
-        VANTA.NET({
-    el: "#appointment",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      points: 20.00
-    })
-
+        function Bookk() {
+            alert("Booking functionality coming soon!");
+        }
     </script>
-      <!-- AOS animation 1st link-->
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <!-- AOS animation 2nd link -->
-      <script>
-        AOS.init();
-      </script>
-      <script src="crud.js"></script>
 </body>
 </html>

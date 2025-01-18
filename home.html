@@ -32,7 +32,7 @@
       <ul class="navul">
         <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300"><a href="#">Home</a></li>
         <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="500"><a href="#">Services</a></li>
-        <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="900"><a href="#">Book Appointment</a></li>
+        <li onclick="Bookk()" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="500"><span>Book Appointment</span></li>
         <li data-aos="fade-down" data-aos-duration="3000" data-aos-delay="1100"><a href="#">About</a></li>
       </ul>
   
@@ -92,32 +92,34 @@
 </section>
 
 
-    
-    <section id="sec2">
+<section id="sec2">
     <h1>Procedure Category</h1>
     <p>Our caring experts are here to listen, guide, and help you feel your best. A healthier, happier you is just one visit away!</p>
-    <div id="content">
-        <div data-aos="fade-down-left" data-aos-duration="500">
-            <img src="img/p1.jpg" width="100%" height="100%">
-        <span><a href="booking.html">Dental Equipment</a></span></div>
-        <div data-aos="fade-up-left" data-aos-duration="700">
-        <img src="img/p2.jpg" width="100%" height="100%">
-        <span><a href="booking.html">Dental Procedure</a></span></div>
-        <div data-aos="fade-up-right" data-aos-duration="900">
-        <img src="img/p3.jpg" width="100%" height="100%">
-        <span><a href="booking.html"> Skin Treatment</a></span></div>
-
-    </div>
-    <div id="content2">
-        <div data-aos="fade-down-left" data-aos-duration="500">
-            <img src="img/p4.jpg" width="100%" height="100%">
-            <span><a href="booking.html">Dental Surgery</a></span></div>
-        <div data-aos="fade-up-left" data-aos-duration="700">
-        <img src="img/p5.jpg" width="100%" height="100%">
-        <span><a href="booking.html">General Surgery</a></span></div>
-        <div data-aos="fade-up-right" data-aos-duration="900">
-        <img src="img/p6.jpg" width="100%" height="100%">
-        <span><a href="booking.html">Medical Consultation</a></span></div>
+    <div class="content-grid">
+        <div class="content-item" data-aos="fade-up" data-aos-duration="500">
+            <img src="img/p1.jpg" alt="Dental Equipment">
+            <span onclick="Bookk()">Dental Equipment</span>
+        </div>
+        <div class="content-item" data-aos="fade-down" data-aos-duration="500">
+            <img src="img/p2.jpg" alt="Dental Procedure">
+            <span onclick="Bookk()">Dental Procedure</span>
+        </div>
+        <div class="content-item" data-aos="fade-up" data-aos-duration="500">
+            <img src="img/p3.jpg" alt="Skin Treatment">
+            <span onclick="Bookk()">Skin Treatment</span>
+        </div>
+        <div class="content-item" data-aos="fade-down" data-aos-duration="500">
+            <img src="img/p4.jpg" alt="Dental Surgery">
+            <span onclick="Bookk()">Dental Surgery</span>
+        </div>
+        <div class="content-item" data-aos="fade-up" data-aos-duration="500">
+            <img src="img/p5.jpg" alt="General Surgery">
+            <span onclick="Bookk()">General Surgery</span>
+        </div>
+        <div class="content-item" data-aos="fade-down" data-aos-duration="500">
+            <img src="img/p6.jpg" alt="Medical Consultation">
+            <span onclick="Bookk()">Medical Consultation</span>
+        </div>
     </div>
 </section>
   <!-- ====================== -->
@@ -128,19 +130,19 @@
         <div class="box" data-aos="fade-up" data-aos-duration="700"></div>
     </div>
     <div class="div">
-        <div onclick="div1()" class="div1">
+        <div onmouseenter="div1()" class="div1">
             <p>Child Dental Checkup</p> 
         </div>
-        <div onclick="div2()" class="div2">
+        <div onmouseenter="div2()" class="div2">
             <p>Patient Consultation</p> 
         </div>
-        <div onclick="div3()" class="div3">
+        <div onmouseenter="div3()" class="div3">
             <p>Eye Checkup for Kids</p> 
         </div>
-        <div onclick="div4()" class="div4">
+        <div onmouseenter="div4()" class="div4">
             <p>MRI Scanning</p> 
         </div>
-        <div onclick="div5()" class="div5">
+        <div onmouseenter="div5()" class="div5">
             <p>X-ray Examination</p>
         </div>
     </div>
@@ -226,7 +228,7 @@
               <li><a href="#services">Services</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#contact">Contact</a></li>
-              <li><a href="#appointment">Book Appointment</a></li>
+              <li><span onclick="Bookk()">Book Appointment</span></li>
             </ul>
           </div>
       
@@ -273,16 +275,20 @@
     <script>
       AOS.init();
     </script>
+        <!-- alert library script  -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- external js link-->
     <script src="script.js"></script>
     <script>
         // JavaScript to toggle the hamburger menu and rotate the bars
         let menuToggle = document.querySelector('.menu'); // Get the mobile menu element
         let navLinks = document.querySelector('.navul');
-    
+        let logElement = document.querySelector('.log'); // Get the log element
+
         menuToggle.addEventListener('click', () => {
           menuToggle.classList.toggle('active'); // Toggle the active class to rotate the hamburger bars
           navLinks.classList.toggle('active'); // Toggle the menu visibility (display flex)
+          logElement.classList.toggle('active');
         });
       </script>
 </body>
