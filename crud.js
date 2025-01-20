@@ -16,7 +16,7 @@ let fetchData= async()=>{
             <div>${e.Time}</div>
             <div>${e.Price}</div>       
             <div onclick="condel('${e.id}')" class="cancel-button">Cancel</div>
-            <div onclick="condel('${e.id}')" class="cancel-button" id="edit">Edit</div>
+            <div onclick="formFill('${e.id}')" class="cancel-button" id="edit">Edit</div>
         </div> `
     })
 }
@@ -218,3 +218,86 @@ let appointment=()=>{
   location.href="crud.html";
   return false;       // to not refresh page
   };
+
+  let formFill= async(id)=> {
+    let url = `http://localhost:3000/appointment/${id}`
+
+    let res = await fetch(url,{method:"GET"})
+    let data = await res.json()
+    let formData=`
+            <div class="group">
+          <label for="fullname">Full Name</label>
+          <input type="text" value="${data.Name}" id="upname" placeholder="Enter your name">
+          <p id="errName" class="error"></p>
+        </div>
+
+        <div class="group">
+          <label for="phone">Phone Number</label>
+          <input type="text" value="${data.Phone}" id="upphone" placeholder="10-digit number">
+          <p id="errPhone" class="error"></p>
+        </div>
+        <div class="group">
+          <label for="age">Age</label>
+          <input type="number" value="${data.Age}" id="upage" placeholder="Enter Age">
+          <p id="errAge" class="error"></p>
+        </div>
+
+        <div class="group">
+          <label for="treatment">Treatment</label>
+          <select id="treatment">
+            <option value="">Choose Treatment</option>
+            <option value="General Checkup">General Checkup</option>
+            <option value="Dental Care">Dental Care</option>
+            <option value="Eye Checkup">Eye Checkup</option>
+            <option value="Skin Treatment">Skin Treatment</option>
+            <option value="Physiotherapy">Physiotherapy</option>
+            <option value="Other">Other</option>
+          </select>
+          <p id="errTreatment" class="error"></p>
+        </div>
+
+        <div class="group">
+          <label for="date">Date:</label>
+          <input type="date" value="${data.Date}" id="update">
+          <p id="errDate" class="error"></p>
+        </div>
+
+        <div class="group">
+          <label for="time">Time:</label>
+          <input type="time" value="${data.Time}" id="uptime">
+          <p id="errTime" class="error"></p>
+        </div>
+
+        <input type="submit" class="button" value="Book Appointment" onclick="return FinalUpdate('${data.id}')">
+    `
+    document.querySelector("#Formdisplay").innerHTML=formData
+  }
+
+  let FinalUpdate=(id)=>{
+    let nname = document.getElementById('upname').value;
+    let pphone = document.getElementById('upphone').value;
+    let aage = document.getElementById('upage').value;
+    let ttreatment = document.getElementById('treatment').value;
+    let ddate = document.getElementById('update').value;
+    let ttime = document.getElementById('uptime').value;
+    let url = `http://localhost:3000/appointment/${id}`
+
+    fetch(url,{
+      method:"PUT",
+      headers:{
+        "Content-Type":"application/json",
+      },
+      body:JSON.stringify(
+        {
+          Name:nname,
+          Phone:pphone,
+          Age:aage,
+          Treatment:ttreatment,
+          Date:ddate,
+          Time:ttime,
+          Price:250
+        }
+      )
+    })
+    return false;
+  }

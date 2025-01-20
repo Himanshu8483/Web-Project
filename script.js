@@ -146,8 +146,16 @@ let signup=()=>{
     localStorage.setItem("password", signpass)
     localStorage.setItem("islogin", "true");
 
-    alert("Sign up Successful! Redirecting to login page...");
-
+    // alert("Sign up Successful! Redirecting to login page...");
+    Swal.fire({         
+        position: "top-end",
+        title: "Signup Successful!",
+        icon: "success",
+        text: "Redirecting to Login page...",
+        color:"green",
+        timer: 3000,
+        showConfirmButton: false,
+    });
     location.href="login.html";
     return false;       // to not refresh page
 
@@ -155,9 +163,27 @@ let signup=()=>{
 let Bookk = () => {
     console.log(localStorage.getItem("islogin"));
     if (localStorage.getItem("islogin") === "true") {
+        Swal.fire({         
+            position: "top-end",
+            title: "Successful!",
+            icon: "success",
+            text: "Redirecting to Booking Appointment page...",
+            color:"green",
+            timer: 3000,
+            showConfirmButton: false,
+        });
         location.href = "booking.html";
     } else {
-        alert("Please Login First!");
+        Swal.fire({         
+            position: "top-end",
+            title: "Invalid!!",
+            icon: "error",
+            text: "Please Login First",
+            color:"brown",
+            timer: 3000,
+            showConfirmButton: false,
+        });
+        // alert("Please Login First!");
     }
 };
 
@@ -170,7 +196,18 @@ let login=()=>{
     let localpass=localStorage.getItem("password")
 
     if(loginname===localname && loginpass===localpass){
+        Swal.fire({         
+            position: "top-end",
+            title: "Login Successful!",
+            icon: "success",
+            text: "Redirecting to Home page...",
+            color:"green",
+            timer: 3000,
+            showConfirmButton: false,
+        });
         location.href="home.html";
+        localStorage.setItem("islogin", "true");
+
 
     }else {
             // library of alert 
@@ -187,7 +224,7 @@ let login=()=>{
         // alert("invalid Name or Password")
     }
 
-    alert("Login Successful! Redirecting to Home page...");
+    // alert("Login Successful! Redirecting to Home page...");
 
     return false;
 };
@@ -195,7 +232,8 @@ let login=()=>{
 
 let logout=()=>{
     // localStorage.clear()
-    localStorage.removeItem("#password")
+    // localStorage.removeItem("password")
+    localStorage.removeItem("islogin")
     location.href="login.html"
 }
 

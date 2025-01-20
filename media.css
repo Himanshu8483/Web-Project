@@ -7,13 +7,13 @@
       display: none;
       flex-direction: column;
       background-color: #0c5d69;
-      position: absolute;
+      position: fixed;
       top: 90px;
       right: 20px;
       width: 90%;
       border-radius: 8px;
       padding: 10px;
-      padding-bottom: 50%;
+      padding-bottom: 35%;
 
     }
   
@@ -21,18 +21,15 @@
       display: flex;
     }
   
-    .navul li {
-      margin: 10px 0;
-    }
   
     .log {
       display: none; /* Hide login/logout */
       flex-direction: column;
       background-color: #0c5d69;
-      position: absolute;
-      bottom: 70px;
-      left: 20px;
-      width: 90%;
+      position: fixed;
+      top: 350px;
+      left: 30px;
+      width: 80%;
       border-radius: 8px;
       padding: 2%;
       padding-left: 40%;
