@@ -42,10 +42,10 @@
     }
     .swiper-slide .overlay h1{
   margin-top: 40%;
-      font-size: 70%;
+      font-size: 85%;
     }
 .swiper-slide .overlay p {
-  font-size: 40%;
+  font-size: 50%;
 }
   #sec2 h1, #sec3 h1 {
       font-size: 30px;
@@ -65,7 +65,7 @@
     #sec3 .div{
         display: flex;
         flex-direction: column;
-    margin-top: 0%;
+    margin-top: -20%;
     }
     #sec3 .div div {
         width: 90%;
