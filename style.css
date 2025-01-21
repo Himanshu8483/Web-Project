@@ -7,7 +7,7 @@
       letter-spacing: 1px;
     }
     body{
-      font-family: Georgia, serif,Arial, sans-serif;
+      font-family: "Playfair Display", serif;
 
     }
 
@@ -74,7 +74,9 @@
     .log {
       display: flex;
       gap: 50px;
+      font-family: "Playwrite VN", serif;
     }
+
 
     .log a , .log span{
       font-size: 20px;
@@ -185,6 +187,7 @@ font-size: 70%;
 }
 
 #sec2 h1 {
+  font-family: "Playwrite VN", serif;
   color: #0c5d69;
   font-size: 40px;
   margin-bottom: 10px;
@@ -224,6 +227,7 @@ font-size: 70%;
 }
 
 .content-item span {
+  font-family: "Playwrite VN", serif;
   display: block;
   text-align: center;
   padding: 15px;
@@ -239,11 +243,12 @@ font-size: 70%;
   justify-content: center;
   align-items: center;
   padding: 2% 0;
-  margin:5% 5%;
+  margin:0% 5% 5% 5%;
 }
 
 
 #sec3 h1 {
+  font-family: "Playwrite VN", serif;
   color: #0c5d69;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   font-size: 40px;
@@ -381,10 +386,15 @@ width: 50%;
   flex-basis: 30%;
   font-size: 30px;
 }
+#sec4 .content h1{
+  font-family: "Playwrite VN", serif;
+}
+
 #sec4 .content p{
   color: #0c5d69;
   font-size: 16px;
   padding: 0 5%;
+  color: black;
 }
 #sec4 .content button{
   margin: 5%;
@@ -468,13 +478,14 @@ button:hover {
 }
 
 .service-item h3 i {
+  
   margin-right: 10px;
   color: #0c5d69;
 }
 
 .service-item p {
   font-size: 16px;
-  color: #0c5d69;
+  color: black;
 }
 
 

@@ -11,11 +11,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!--AOS animation (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- external css file -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Playfair+Display:wght@400..900&family=Playwrite+VN&family=Rowdies:wght@300;400;700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Playfair+Display:wght@400..900&family=Playwrite+VN&family=Rowdies:wght@300;400;700&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+     <!-- external css file -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
 </head>
-<body>
+<body onload="checklogin()">
     <nav class="navbar">
       <div class="navbar-logo" data-aos="fade-right" data-aos-duration="3000">
         <a href="#"><span>D</span>octor <span>C</span>are</a>
@@ -37,8 +45,8 @@
       </ul>
   
       <div class="log">
-        <a href="login.html" data-aos="fade-down" data-aos-duration="3000">Login</a>
-        <span data-aos="fade-down" data-aos-duration="3000" onclick="logout()">Logout</span>
+        <a href="login.html" data-aos="fade-down" data-aos-duration="3000" id="loginbtn">Login</a>
+        <span data-aos="fade-down" data-aos-duration="3000" onclick="logout()" id="logoutbtn">Logout</span>
       </div>
     </nav>
   

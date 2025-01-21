@@ -9,6 +9,22 @@
 //     }
 // }, 2000);
 
+let checklogin=()=>{
+console.log("working");
+
+  let loginbtn=document.querySelector("#loginbtn")
+  let logoutbtn=document.querySelector("#logoutbtn")
+
+  if(localStorage.getItem("islogin") === "true"){
+    loginbtn.style.display="none"
+    logoutbtn.style.display="block"
+  }else{
+    logoutbtn.style.display="none"
+    loginbtn.style.display="block"
+  }
+
+}
+
 
 let signup=()=>{
 

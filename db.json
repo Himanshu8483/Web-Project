@@ -24,11 +24,21 @@
       "Name": "Him",
       "Phone": "7909348483",
       "Age": "23",
-      "Treatment": "Eye Checkup",
+      "Treatment": "General Checkup",
       "Date": "2025-02-08",
       "Time": "20:18",
       "Price": 250,
       "id": "bb8c"
+    },
+    {
+      "id": "31df",
+      "Name": "Himanshu",
+      "Phone": "7909348483",
+      "Age": "22",
+      "Treatment": "Dental Care",
+      "Date": "2025-02-07",
+      "Time": "12:23",
+      "Price": 250
     }
   ]
 }
