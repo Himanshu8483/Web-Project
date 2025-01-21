@@ -423,6 +423,8 @@ button:hover {
   display: flex;
   flex-wrap: wrap; 
   min-width: fit-content;
+  padding: 2px;
+  margin: 0;
 }
 
 .left-section {
@@ -461,10 +463,11 @@ button:hover {
   padding: 20px;
   display: grid;
   grid-template-columns: auto auto; 
+
 }
 
 .service-item {
-  padding: 15px;
+  padding: 5px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
