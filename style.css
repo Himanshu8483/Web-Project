@@ -189,7 +189,7 @@ font-size: 70%;
   font-family: "Playwrite VN", serif;
   color: #0c5d69;
   font-size: 40px;
-  margin-bottom: 10px;
+  margin: 10px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 
 }
@@ -251,7 +251,7 @@ font-size: 70%;
   color: #0c5d69;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   font-size: 40px;
-  margin: 4%;
+  margin: 4px;
   display: inline;
 
   text-align: center;
@@ -259,7 +259,7 @@ font-size: 70%;
 
 #sec3 p {
   font-size: 18px;
-  margin: 5% 5%;
+  margin: 1% 5%;
   text-align: center;
 }
 
@@ -388,6 +388,8 @@ width: 50%;
 }
 #sec4 .content h1{
   font-family: "Playwrite VN", serif;
+  margin: 0;
+  line-height: 200%;
 }
 
 #sec4 .content p{
