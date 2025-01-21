@@ -138,7 +138,7 @@
       top: 10px;
     }
 
-/* Sec 1 */
+/* Sec1 */
 .swiper{
   margin: 1% 0;
   width:100%;
@@ -166,7 +166,6 @@
   align-items: center;
   text-align: center;
   padding:7% 10% 10% 15%;
-
 }
 .swiper-slide .overlay h1 {
 color: black;
@@ -276,6 +275,7 @@ font-size: 70%;
   background-size: cover;
   background-position: center;
   height: 100%;
+  border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -423,8 +423,6 @@ button:hover {
   display: flex;
   flex-wrap: wrap; 
   min-width: fit-content;
-
-  
 }
 
 .left-section {
