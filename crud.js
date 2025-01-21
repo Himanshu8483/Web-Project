@@ -280,6 +280,7 @@ let appointment=()=>{
     let ttreatment = document.getElementById('treatment').value;
     let ddate = document.getElementById('update').value;
     let ttime = document.getElementById('uptime').value;
+    
     let url = `http://localhost:3000/appointment/${id}`
 
     fetch(url,{

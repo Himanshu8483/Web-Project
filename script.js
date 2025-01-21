@@ -205,7 +205,7 @@ let login=()=>{
             timer: 3000,
             showConfirmButton: false,
         });
-        location.href="home.html";
+        location.href="index.html";
         localStorage.setItem("islogin", "true");
 
 
