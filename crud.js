@@ -1,10 +1,27 @@
+
+
+
 let fetchData= async()=>{
     let url= 'http://localhost:3000/appointment';
     let res= await fetch(url, {method:"GET"})
     let data= await res.json()
     console.log(data);
+    dataShow(data)
+}
+let searchh=async()=>{
+  let searchinp = document.querySelector('#searchinp').value.toLowerCase();
+  let url= 'http://localhost:3000/appointment';
+  let res= await fetch(url,{ method:"GET"})
+    let data = await res.json()
+    let filterData=data.filter((e)=>{
+      return e.Name.toLowerCase().includes(searchinp) || e.Treatment.toLowerCase().includes(searchinp)|| e.Age.toString().includes(searchinp)
+    })
 
+    dataShow(filterData)
+}
+let dataShow=(data)=>{
     let show=document.querySelector("#display")
+    show.innerHTML=""
     data.map((e)=>{
         show.innerHTML+= `
         <div class="row">
@@ -232,7 +249,7 @@ let appointment=()=>{
         </div>
 
         <div class="group">
-          <label for="phone">Phone Number</label>
+          <label for="phone">Phone</label>
           <input type="text" value="${data.Phone}" id="upphone" placeholder="10-digit number">
           <p id="errPhone" class="error"></p>
         </div>

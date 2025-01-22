@@ -5,22 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Toggle and Login Check</title>
   <style>
-    /* Basic styling for buttons */
     button {
       margin: 10px;
       padding: 10px 20px;
       cursor: pointer;
     }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 50px;
+      list-style: none;
+    }
+        /* Hamburger Icon */
+        .menu {
+      display: none;
+      position: relative;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    span {
+      background-color: black;
+      height: 3px;
+      width: 30px;
+      margin: 4px 0;
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      left: 0;
+    }
+
+    .bar1 {
+      top: 0;
+    }
+
+    .bar2 {
+      top: 10px;
+    }
+
+    .bar3 {
+      top: 20px;
+    }
+        /* Rotate Effect */
+        .menu.active .bar1 {
+      transform: rotate(45deg);
+      top: 10px;
+    }
+
+    .menu.active .bar2 {
+      opacity: 0;
+    }
+
+    .menu.active .bar3 {
+      transform: rotate(-45deg);
+      top: 10px;
+    }
+
+@media screen and (max-width: 1000px) {
+  .menu {
+      display: block;
+    }
+    ul{
+      display: none;
+      flex-direction: column;
+      background-color: #0c5d69;
+      position: fixed;
+      top: 90px;
+      right: 20px;
+      width: 90%;
+      border-radius: 8px;
+      padding: 10px;
+      padding-bottom: 35%;
+    }
+  
+    ul.active {
+      display: flex;
+    }
+  }
   </style>
 </head>
 <body onload="checklogin()">
   <!-- Buttons for login and logout -->
-  <button id="loginbtn" onclick="return login()">Login</button>
-  <button id="logoutbtn" onclick="return logout()">Logout</button>
+  <button id="loginbtn" onclick="login()">Login</button>
+  <button id="logoutbtn" onclick="logout()">Logout</button>
 
+      <!-- Hamburger Icon -->
+      <div class="menu">
+        <span class=" bar1"></span>
+        <span class=" bar2"></span>
+        <span class="bar3"></span>
+      </div>
   <!-- Menu for navigation -->
-  <div class="menu">Menu</div>
-  <ul class="navul">
+  <ul>
     <li>Home</li>
     <li>About</li>
     <li>Contact</li>
@@ -33,7 +110,7 @@
     let menuToggle = document.querySelector('.menu');
 
     // Get the navigation links container (ul element)
-    let navLinks = document.querySelector('.navul');
+    let navLinks = document.querySelector('ul');
 
     // Add a click event listener to the hamburger menu
     menuToggle.addEventListener('click', () => {

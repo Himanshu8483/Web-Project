@@ -13,9 +13,9 @@
             font-family: ' Courier New', Courier, monospace;
         } 
         #heading {
-            margin-top: 50px;
+            margin-top: 20px;
             margin: 5%;
-            height: 20vh;
+            height: 30vh;
             display: block;
             justify-content: center;
             align-items: center;
@@ -123,6 +123,26 @@
         color: black;
         font-size: 110%;
         }
+        .input{
+
+            position: absolute;
+            top: 40vh;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content:start;
+            /* gap: 50px; */
+            width: 100%;
+
+        }
+        #searchinp {
+            width: 200px;
+            margin-left: 10px;
+        }
+        h2{
+            display: inline;
+            color: black;
+        }
         
 @media screen and (max-width: 1000px) {
     #headers, .row {
@@ -139,14 +159,18 @@
             position: fixed;
             top: 15%;
     }
+    .input{
+        justify-content:center;
+        top: 20vh;
+    }
     #Formdisplay {
-        margin-top: 10vh;
+        margin-top: 30vh;
         height: 10vh;
         display: grid;
         grid-template-columns: auto auto;
 }
 #container{
-    margin-top: 50vh;
+    margin-top: 70vh;
 }
 }
     </style>
@@ -154,6 +178,10 @@
 <body onload="fetchData()">
     <div id="heading">
     <h1>Doctor Appointment List</h1>
+    <div class="input">
+    <h2>Search by Name, Age, or Treatment</h2>
+    <input type="text" placeholder="Search Here" id="searchinp" oninput="searchh()">
+    </div>
     <div id="Formdisplay"></div>
     <a href="index.html">Go to Home Section</a>
     </div>

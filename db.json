@@ -1,10 +1,10 @@
 {
   "appointment": [
     {
-      "Name": "Himanshu Kushwaha",
+      "Name": "Himanshu",
       "Phone": "7909348483",
       "Age": "22",
-      "Treatment": "Dental Care",
+      "Treatment": "",
       "Date": "2025-01-01",
       "Time": "01:00",
       "Price": 250,
