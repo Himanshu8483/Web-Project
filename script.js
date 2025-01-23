@@ -8,7 +8,6 @@
 //         isname =true;
 //     }
 // }, 2000);
-
 let checklogin=()=>{
 console.log("working");
 

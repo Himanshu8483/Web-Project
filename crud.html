@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor</title>
+    <!-- pagination css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.css" integrity="sha512-TH+vnrhByFI2RzNvaHSqt6EwoJ9Bp+yGAGTWp84qTuTx315ebnypxtyGHpli55Rm4N4J+N/0W9xAL2b5RZ2ZSA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #1F91A0;
-            color: #fff;
+            background: linear-gradient(rgb(32, 120, 51), rgb(19, 199, 172) 100%);
             font-family: ' Courier New', Courier, monospace;
+            min-height: 90vh;
         } 
         #heading {
             margin-top: 20px;
-            margin: 5%;
+            margin: 5% 0;
             height: 30vh;
             display: block;
             justify-content: center;
@@ -35,14 +37,17 @@
             display: grid;
             text-align: center;
             grid-template-columns: 14% 10% 10% 20% 10% 8% 8% 10% 10% ;
-            background-color: #005f63;
+            background-color: #1a9f9f;
             padding: 10px;
             border-radius: 10px;
             margin: 10px 30px;
+            box-shadow: 0 2px 1px black;
+            
         }
         .row {
-            background-color: #007b7f;
+            background-color: #176f66;
             align-items: center;
+            color: antiquewhite;
         }
         #headers div, .row div {
             font-size: 18px;
@@ -72,7 +77,7 @@
             box-shadow: 0 3px 3px;
             transition:  0.3s ease;
         }
-        a {
+        #heading a {
             position: fixed;
             right: 5%;
             top: 2%;
@@ -86,7 +91,7 @@
             
             
         }
-        a:hover{
+        #heading a:hover{
             text-decoration: none;
             color: black;
             box-shadow: 0 3px 3px;
@@ -138,13 +143,27 @@
         #searchinp {
             width: 200px;
             margin-left: 10px;
+            box-shadow: 0 2px 1px black;
+
         }
         h2{
             display: inline;
             color: black;
+            margin-left: 10px ;
+        }
+        #pagin{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1%;
+            
+
         }
         
 @media screen and (max-width: 1000px) {
+    body {
+        height: fit-content;
+    }
     #headers, .row {
         display: block;
     }
@@ -155,7 +174,7 @@
         height: 50px;
         margin: 2%;
     }
-    a {
+    #heading a {
             position: fixed;
             top: 15%;
     }
@@ -203,6 +222,12 @@
         <div id="display">
         </div>
     </div>
+    
+    <div id="pagin"></div>
+ <!-- jquery for pagination  -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Pagination script  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js" integrity="sha512-GzbaI5EsNzdEUq6/2XLYpr1y9CUZRIVsUeWTAFgULtQa5jZ3Nug8i0nZKM6jp9NffBCZhymPPQFcF0DK+JkRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alert library script  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="crud.js"></script>

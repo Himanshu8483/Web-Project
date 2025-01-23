@@ -6,7 +6,7 @@ let fetchData= async()=>{
     let res= await fetch(url, {method:"GET"})
     let data= await res.json()
     console.log(data);
-    dataShow(data)
+    paginationn(data)
 }
 let searchh=async()=>{
   let searchinp = document.querySelector('#searchinp').value.toLowerCase();
@@ -17,7 +17,17 @@ let searchh=async()=>{
       return e.Name.toLowerCase().includes(searchinp) || e.Treatment.toLowerCase().includes(searchinp)|| e.Age.toString().includes(searchinp)
     })
 
-    dataShow(filterData)
+    paginationn(filterData)
+}
+let paginationn=(data)=>{
+  $('#pagin').pagination({
+    dataSource: data,
+    pageSize: 5,
+    showSizeChanger: true,
+    callback: function(data, pagination) {
+      dataShow(data)
+    }
+})
 }
 let dataShow=(data)=>{
     let show=document.querySelector("#display")
