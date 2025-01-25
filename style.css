@@ -10,8 +10,6 @@
       font-family: "Poppins", serif;
       font-weight: 500;
       font-style: italic;
-
-
     }
 
     /* Navbar */
@@ -73,7 +71,7 @@
       transition: color 0.7s ease;
       cursor: pointer;
     }
-
+/* login logout button in index html  */
     .log {
       display: flex;
       gap: 50px;
@@ -126,7 +124,7 @@
       top: 20px;
     }
 
-    /* Rotate Effect */
+    /* Rotate Effect for media query */
     .menu.active .bar1 {
       transform: rotate(45deg);
       top: 10px;
@@ -141,7 +139,7 @@
       top: 10px;
     }
 
-/* Sec1 */
+/* Section 1 */
 .swiper{
   margin: 1% 0;
   width:100%;
@@ -215,7 +213,7 @@ font-size: 70%;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 .content-item:hover {
@@ -349,6 +347,7 @@ font-size: 70%;
   scale: 1.03;
 }
 
+/* Section 4 */
 /* ====================================== */
 #sec4{
   display: flex;
@@ -430,6 +429,7 @@ width: 50%;
   box-shadow: 0 3px 3px;
   }
 /* ====================================== */
+/* section 5  */
 #sec5 {
   height: 100vh;
   width: 100%;
