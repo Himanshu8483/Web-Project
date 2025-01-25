@@ -1,15 +1,9 @@
-
-    * {
+ * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       text-decoration: none;
       letter-spacing: 1px;
-    }
-    body{
-      font-family: "Poppins", serif;
-      font-weight: 500;
-      font-style: italic;
     }
 
     /* Navbar */
@@ -51,13 +45,13 @@
 
     .navul li a{
       color: white;
-      font-size: 25px;
+      font-size: 22px;
       font-weight: 540;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
     }
     .navul li span {
       color: white;
-      font-size: 25px;
+      font-size: 22px;
       font-weight: 540;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
     }
@@ -124,7 +118,7 @@
       top: 20px;
     }
 
-    /* Rotate Effect for media query */
+    /* Rotate Hamburger Effect for media query */
     .menu.active .bar1 {
       transform: rotate(45deg);
       top: 10px;
@@ -171,7 +165,6 @@
 .swiper-slide .overlay h1 {
 color: white;
 font-size: 150%;
-/* box-shadow: 2px 4px 8px 3px #0c5d69;   */
 margin: 15% 0 5% 0;
 }
 .swiper-slide .overlay p {
@@ -187,7 +180,6 @@ font-size: 70%;
 }
 
 #sec2 h1 {
-  /* font-family: "Playwrite VN", serif; */
   color: #0c5d69;
   font-size: 45px;
   margin: 10px;
@@ -225,22 +217,24 @@ font-size: 70%;
 .content-item img {
   width: 100%;
   height: 200px;
+  transition: 1s all ease;
+  
 
 }
 .content-item img:hover{
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1.09);
+  transform: scale(1.1);
+  
 }
 
 
 .content-item span {
-  font-family: "Playwrite VN", serif;
   display: block;
   text-align: center;
   padding: 15px;
-  font-size: 18px;
+  font-size: 20px;
   color: #0c5d69;
   cursor: pointer;
+  font-weight: 600;
 }
 
 /* Section 3*/
@@ -308,44 +302,38 @@ font-size: 70%;
   background-size: cover;
   background-position: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  transition: transform 0.1s ease-in-out;
+  /* transition: transform 0.1s ease-in-out; */
   color: white;
+  transition: 1s all ease;
 }
 
 #sec3 .div div:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 .div1 {
   background-image: url(img/1.jpg);
+  transition: 5s all ease;
 }
-.div1:hover{
-  scale: 1.03;
-}
+
 .div2{
   background-image: url(img/2.jpg);
+  transition: 0.5s all ease-in-out;
+
 }
-.div2:hover{
-  scale: 1.03;
-}
+
 .div3 {
   background-image: url(img/3.jpg);
 }
-.div3:hover{
-  scale: 1.03;
-}
+
 .div4 {
   background-image: url(img/4.jpg);
 }
-.div4:hover{
-  scale: 1.03;
-}
+
 .div5 {
   background-image: url(img/5.jpg);
 }
-.div5:hover{
-  scale: 1.03;
-}
+
 
 /* Section 4 */
 /* ====================================== */
@@ -411,7 +399,7 @@ width: 50%;
   border-radius: 10px;
   outline: none;
   cursor: pointer;
-  background-color: rgb(235, 124, 33);
+  background-color: #0c5d69;
   list-style: none;
   transition: transform 0.5s ease;
   border: none;
@@ -433,10 +421,10 @@ width: 50%;
 #sec5 {
   height: 100vh;
   width: 100%;
-  font-style: normal;
 }
 
 #sec5 .container {
+  font-family: normal;
   display: flex;
   flex-wrap: wrap; 
   min-width: fit-content;
@@ -491,7 +479,7 @@ width: 50%;
 }
 
 .service-item h3 {
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
@@ -502,7 +490,7 @@ width: 50%;
 }
 
 .service-item p {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
 }
 
@@ -516,7 +504,8 @@ width: 50%;
 }
 
 .container {
-    height: 90vh;
+  font-family: cursive;
+    height: 92vh;
     max-width: 500px;
     margin: auto ;
     top: 4%;
@@ -525,6 +514,7 @@ width: 50%;
     box-shadow: 0 4px 8px;  
     border-radius: 8px;
 }
+
 #login .container {
     height: 55vh;       
     top: 20%;
@@ -574,6 +564,7 @@ input:focus, #treatment:focus , #message:focus {
     color: red;
     font-size: 14px;
     margin: 0px;
+    font-weight: 550;
 }
 
 .btn {
@@ -638,7 +629,6 @@ a:hover {
 }
 
 .footer-section h2, .footer-section h3 {
-      font-family: cursive;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 
   font-size: 170%;
