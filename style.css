@@ -55,11 +55,13 @@
       font-weight: 540;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
     }
+
     .navul li a:hover {
       color: orangered;
       text-decoration: none;
       transition: color 0.7s ease;
     }
+    
     .navul li span:hover {
       color: orangered;
       transition: color 0.7s ease;

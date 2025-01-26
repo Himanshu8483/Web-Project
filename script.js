@@ -1,6 +1,6 @@
 // let isname=true;
 // setInterval(() => {
-//     document.title=isname?"Doctor Care":"Book Appointment";
+//     document.title=isname?"Doctor Care":"Book  that Appointment";
 //     if(isname==true){
 //         isname = false;
 //     }
